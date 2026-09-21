@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.artconnect.ui.ArtworkController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="8.0" alignment="CENTER_LEFT">
+        <Label text="Artworks" style="-fx-font-size: 14; -fx-font-weight: bold;" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="addBtn"    text="+ Add"    onAction="#handleAdd"    style="-fx-base: #4CAF50; -fx-text-fill: white;" />
+        <Button fx:id="editBtn"   text="✎ Edit"   onAction="#handleEdit"   style="-fx-base: #2196F3; -fx-text-fill: white;" />
+        <Button fx:id="deleteBtn" text="✕ Delete" onAction="#handleDelete" style="-fx-base: #f44336; -fx-text-fill: white;" />
+    </HBox>
+    <TableView fx:id="artworkTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn"  text="Title"       prefWidth="200" />
+            <TableColumn fx:id="artistColumn" text="Artist"      prefWidth="150" />
+            <TableColumn fx:id="typeColumn"   text="Type"        prefWidth="100" />
+            <TableColumn fx:id="yearColumn"   text="Year"        prefWidth="60"  />
+            <TableColumn fx:id="priceColumn"  text="Price (€)"   prefWidth="100" />
+            <TableColumn fx:id="statusColumn" text="Status"      prefWidth="100" />
+            <TableColumn fx:id="tagsColumn"   text="Tags"        prefWidth="180" />
+        </columns>
+    </TableView>
+</VBox>
